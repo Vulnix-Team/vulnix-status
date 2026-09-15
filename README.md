@@ -20,6 +20,15 @@
 Data + static site for [status.vulnix.dev](https://status.vulnix.dev), the
 public status page for the Vulnix platform.
 
+> **Retired 2026-09-15.** `status.vulnix.dev` is now served by
+> [Better Stack](https://vulnix.betteruptime.com), which runs the same four
+> checks from its own global probe network. This repo is kept intact as a cold
+> standby: the scheduled checker in the main repo
+> (`.github/workflows/status-check.yml`) has its cron commented out so the two
+> can't publish competing histories, but it can still be run manually via
+> `workflow_dispatch` if we ever need to fall back. The JSON files below are
+> frozen at their last real check.
+
 This repo is intentionally separate from the main Vulnix codebase and hosted
 on GitHub Pages (not Vulnix's own AWS infrastructure), so the status page and
 its uptime history keep working - and keep telling the truth - even during a
